@@ -1,0 +1,405 @@
+/* | IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* | CSS RESET  */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* | UTILITY CLSSES */
+img {
+	display: block;
+}
+
+.cp {
+	cursor: pointer;
+}
+
+/* | VARIABLES */
+:root {
+	/* | COLORS  */
+	--desaturated-red: hsl(0, 36%, 70%);
+	--soft-red: hsl(0, 93%, 68%);
+	--dark-grayish-red: hsl(0, 6%, 24%);
+	--linear-1: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+	--linear-2: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+
+	/* | FONTS  */
+	--body-fonts: 400 18px 'Josefin Sans';
+	--h1-fonts: 600 50px 'Josefin Sans';
+}
+
+/* | GENERAL STYLES */
+html {
+	height: auto;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	gap: 40px;
+	font: var(--body-fonts);
+	color: var(--desaturated-red);
+	line-height: 1.5;
+	background: url(img/bg-pattern-desktop.svg) left no-repeat;
+	background-size: contain;
+}
+
+body > * {
+	width: 610px;
+}
+
+.container {
+	padding-top: 65px;
+	padding-left: 165px;
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: start;
+	gap: 136px;
+}
+
+.header img {
+	width: 160px;
+	height: auto;
+}
+
+.img-section {
+	display: none;
+}
+
+.text-area {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	gap: 32px;
+}
+
+h1 {
+	width: 360px;
+	font: var(--h1-fonts);
+	color: var(--dark-grayish-red);
+	text-transform: uppercase;
+	display: flex;
+	flex-flow: column;
+	letter-spacing: 5px;
+}
+
+h1 span {
+	font-weight: 300;
+	color: var(--desaturated-red);
+}
+
+.search-area {
+	display: flex;
+	flex-flow: column;
+	gap: 10px;
+}
+
+form {
+	width: 100%;
+	height: 56px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+	border: 1px solid var(--dark-grayish-red);
+}
+
+form > *,
+input {
+	height: 100%;
+	width: 100%;
+	border: none;
+	outline: none;
+	font: inherit;
+}
+
+.input {
+	height: 100%;
+	width: 100%;
+	padding-inline: 32px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+i {
+	width: 24px;
+	height: 24px;
+	margin-right: -32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+i img {
+	width: 100%;
+	height: auto;
+	display: none;
+}
+
+.btn {
+	width: 145px;
+	border-radius: 50px;
+	background: linear-gradient(var(--linear-2));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 20px 50px 5px var(--desaturated-red);
+}
+
+.btn:hover {
+	height: 60px;
+	background: var(--desaturated-red);
+}
+
+.search-area p {
+	padding-left: 20px;
+	color: var(--soft-red);
+}
+
+.desktop-img {
+	height: 100%;
+}
+
+.desktop-img img {
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 1100px) {
+	body {
+		align-items: center;
+	}
+
+	.container {
+		padding-top: 30px;
+		padding-left: 80px;
+		gap: 60px;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-fonts: 400 14px 'Josefin Sans';
+		--h1-fonts: 600 32px 'Josefin Sans';
+	}
+
+	.container {
+		width: 350px;
+		padding-top: 30px;
+		padding-left: 40px;
+		gap: 60px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-fonts: 400 32px 'Josefin Sans';
+		--h1-fonts: 600 60px 'Josefin Sans';
+	}
+
+	/* | GENERAL STYLES */
+	html {
+		max-width: 750px;
+	}
+
+	body {
+		background: linear-gradient(var(--linear-1));
+	}
+
+	.container {
+		margin: 64px auto 184px;
+		width: 100%;
+		padding: 0;
+		justify-content: center;
+		align-items: center;
+		gap: 132px;
+	}
+
+	header {
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+		gap: 64px;
+	}
+
+	.header > img {
+		margin-left: 64px;
+		width: 200px;
+	}
+
+	.img-section {
+		width: 100%;
+		display: block;
+	}
+
+	.img-section img {
+		width: 100%;
+		height: auto;
+	}
+
+	.text-area {
+		padding-inline: 64px;
+		align-items: center;
+		text-align: center;
+		gap: 64px;
+	}
+
+	h1 {
+		width: 100%;
+	}
+
+	.search-area {
+		width: 100%;
+		gap: 20px;
+	}
+
+	form {
+		height: 96px;
+	}
+
+	.input {
+		padding-inline: 48px;
+	}
+
+	.btn:hover {
+		height: 100px;
+	}
+
+	.search-area p {
+		text-align-last: left;
+		padding-left: 40px;
+	}
+
+	.desktop-img {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-fonts: 400 24px 'Josefin Sans';
+		--h1-fonts: 600 45px 'Josefin Sans';
+	}
+
+	/* | GENERAL STYLES */
+	html {
+		max-width: 500px;
+	}
+
+	.container {
+		margin: 48px auto 138px;
+		gap: 99px;
+	}
+
+	header {
+		gap: 48px;
+	}
+
+	.header > img {
+		margin-left: 48px;
+		width: 150px;
+	}
+
+	.text-area {
+		padding-inline: 48px;
+		gap: 48px;
+	}
+
+	.search-area {
+		gap: 15px;
+	}
+
+	form {
+		height: 72px;
+	}
+
+	.input {
+		padding-inline: 36px;
+	}
+
+	i {
+		width: 18px;
+		height: 18px;
+	}
+
+	.btn:hover {
+		height: 75px;
+	}
+
+	.search-area p {
+		padding-left: 30px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-fonts: 400 16px 'Josefin Sans';
+		--h1-fonts: 600 30px 'Josefin Sans';
+	}
+
+	/* | GENERAL STYLES */
+	html {
+		max-width: 375px;
+	}
+
+	.container {
+		margin: 32px auto 92px;
+		gap: 66px;
+	}
+
+	header {
+		gap: 32px;
+	}
+
+	.header > img {
+		margin-left: 32px;
+		width: 100px;
+	}
+
+	.text-area {
+		padding-inline: 32px;
+		gap: 32px;
+	}
+
+	.search-area {
+		gap: 10px;
+	}
+
+	form {
+		height: 48px;
+	}
+
+	.input {
+		padding-inline: 24px;
+	}
+
+	i {
+		width: 12px;
+		height: 12px;
+	}
+
+	.btn:hover {
+		height: 50px;
+	}
+
+	.search-area p {
+		padding-left: 20px;
+	}
+}

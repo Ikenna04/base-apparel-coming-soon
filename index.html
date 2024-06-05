@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Base Apparel Coming Soon Page</title>
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<link
+			rel="shortcut icon"
+			href="img/favicon-32x32.png"
+			type="image/x-icon" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<img
+					src="img/logo.svg"
+					alt="" />
+				<section class="img-section">
+					<img
+						src="img/hero-mobile.jpg"
+						alt="Mobile Image" />
+				</section>
+			</header>
+			<section class="text-area">
+				<h1><span>We're</span> coming <c>soon</c></h1>
+				<p>
+					Hello fellow shoppers! We're currently building our new fashion store.
+					Add your email below to stay up-to-date with announcements and our
+					launch deals.
+				</p>
+				<div class="search-area">
+					<form
+						action=""
+						id="form">
+						<div
+							class="input"
+							id="input">
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Email Address" />
+							<i
+								><img
+									src="img/icon-error.svg"
+									alt="Error Icon"
+									id="error-icon"
+							/></i>
+						</div>
+						<div
+							type="submit"
+							class="btn cp"
+							onclick="showError()">
+							<img
+								src="img/icon-arrow.svg"
+								alt="Arrow Icon" />
+						</div>
+					</form>
+					<p id="info"></p>
+				</div>
+			</section>
+		</div>
+		<div class="desktop-img">
+			<img
+				src="img/hero-desktop.jpg"
+				alt="Desktop Image" />
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
